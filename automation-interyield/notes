@@ -1,0 +1,177 @@
+===================================================================================================================================
+						Known issues/challenges
+===================================================================================================================================
+1. Master IY Pop and Aggressive IY Pop Test Cases needs to be run sequentially in local machine.
+   As we cannot have all the browsers configured in a single machine, need to build and run the script 
+   in different machines with different set of browsers and browser versions.
+   Identify where to run these test cases and respective data need to provided in excel sheets 
+   as data provider.
+   We still do not have solution to test these functionalities in mobile platform.
+2. Other test cases can be run in parallel in remote web driver using browser stack.
+
+===================================================================================================================================
+						A. Steps to build and execute the project:
+===================================================================================================================================
+
+1. Checkout the project
+2. Change it to Maven project 
+3. Run the goal mvn clean install
+
+(This step may fail if you try to run the goal from eclipse as eclipse doesn't point to JDK instead it may point to JRE,
+so change the path to point to JDK as Goto Window -> Preferences -> Java -> Installed JREs -> Change the path location to point out to JDK1.7)
+ 
+4. From the target directory find automation-interyield-1.0-SNAPSHOT.tar.gz(this can be shared to the client) and extract it
+5. From the extracted path(say I extracted automation-interyield-1.0-SNAPSHOT.tar.gz to D - Disk Drive as automation-interyield-1.0-SNAPSHOT) run the following command from command line interpreter as 
+	D:\automation-interyield-1.0-SNAPSHOT>java -cp "lib/*;conf/" org.testng.TestNG  conf\testng.xml -groups <groupname>
+	
+6. If you want to run the tests in local machine then change the property value of run_mode under driver.properties 
+	of conf/ directory to local i.e. run_mode=local
+7. If you want to run the tests in remote machine like browserstack then change the property value of run_mode under driver.properties 
+	of conf/ directory to remote i.e. run_mode=remote
+8. Edit the .xlsx files present under conf/templatedata/ directory to give the required input data as in section B. 		
+	
+=======================================================================================================================================
+						B. Working with Excel Data
+=======================================================================================================================================
+1. The input data with different combinations lies in templatedata folder of the conf directory of the project structure as conf/templatedata/
+2. you can see 2 different excel sheets as AggressivePop.xlsx meant for Aggressive Pop functionality, MasterPop.xlsx meant for Master Pop functionality 
+   and InputData.xlsx for rest of the functionalities  
+   
+	a. AggressivePop.xlsx contains 2 sheets to run test functionality for Aggressive Pop
+		1. sheet with name 'HTMLElements' that contains different web elements of javascript which we will use to trigger an event/pop
+		2. sheet with name 'AggressivePop' that contains different test cases with different combinations of input data
+	b. MasterPop.xlsx contains 2 sheets to run test functionality for Master Pop
+		1. sheet with name 'HTMLElements' that contains different web elements of javascript which we will use to trigger an event/pop
+		2. sheet with name 'MasterPop' that contains different test cases with different combinations of input data
+	c. InputData.xlsx contains 3 sheets to run test functionalities other than Master Pop and Aggressive Pop 
+		1. sheet with name 'BrowserData' that contains browser details like BROWSER and BROWSER VERSION where tests need to be run
+		2. sheet with name 'DesktopPlatform' that contains OS details like OS, OS VERSION and RUN MODE where tests need to be run. 
+			Select Y against RUN MODE corresponding to a row for which you want to run the tests.  
+		3. sheet with name 'MobilePlatform' that contains mobile platform details like PLATFORM, BROWSER, DEVICE and RUN MODE where tests need to be run.
+		    Select Y against RUN MODE corresponding to a row for which you want to run the tests.		   
+
+=======================================================================================================================================
+						C. Which test suite or test group need to be executed can be decided as below:
+=======================================================================================================================================
+
+If you want to run all IY tests i.e. IY tests of all the functionalities then select group name 'IYTests'
+If you want to run all IYD tests i.e. IYD tests of all the functionalities then select group name 'IYDTests'
+
+If you want to run all Desktop tests i.e. test all the functionalities in desktop desktop then select group name 'DesktopTests'
+If you want to run all Mobile tests i.e. test all the functionalities in mobile platform then select group name 'MobileTests'
+
+If you want to run all IY tests in Desktop i.e. test all the IY test functionalities in desktop platform then select group name 'DesktopIYTests'
+If you want to run all IYD tests in Desktop i.e. test all the IYD test functionalities in desktop platform then select group name 'DesktopIYDTests'
+
+If you want to run all IY tests in mobile i.e. test all the IY test functionalities in mobile platform then select group name 'MobileIYTests'
+If you want to run all IYD tests in mobile i.e. test all the IYD test functionalities in mobile platform then select group name 'MobileIYDTests'
+
+If you want to run all tests irrespective of IY or IYD or Desktop Platform or Mobile Platform then select group name 'AllTests'
+
+If you want to run individual tests to include IY, IYD, Desktop Platform and Mobile Platform then select respective group name from below:
+
+'AdCountTests'
+'AggressivePopTests'
+'BackCatcher1Tests'
+'BackCatcher2Tests'
+'MasterPopTests'
+'MatureContentTests'
+'OptOutTests'
+'SleepTests'
+'SnoozeAlarmTests'
+'SnoozeTests'
+
+If you want to run individual tests say for AdCount functionality and include IY or IYD, Desktop Platform or Mobile Platform then select respective group name from below:
+
+'IYAdCountTests' - this test will run for AdCount functionality for Desktop and Mobile Platforms for IY only
+'IYDAdCountTests' - this test will run for AdCount functionality for Desktop and Mobile Platforms for IYD only
+
+'DesktopAdCountTests' - this test will run for AdCount functionality for IY and IYD for Desktop Platform only
+'MobileAdCountTests' - this test will run for AdCount functionality for IY and IYD for Mobile Platform only
+
+Like wise total groups are as as follows:
+
+'AllTests'
+
+'IYTests'
+'IYDTests'
+
+'DesktopTests'
+'MobileTests'
+
+'DesktopIYTests'
+'DesktopIYDTests'
+
+'MobileIYTests'
+'MobileIYDTests'
+
+Individual Functionality Tests that will run for both IY and IYD and desktop and mobile platforms
+
+'AdCountTests'
+'SnoozeAlarmTests'
+'AggressivePopTests'
+'BackCatcher1Tests'
+'BackCatcher2Tests'
+'MasterPopTests'
+'MatureContentTests'
+'OptOutTests'
+'SleepTests'
+'SnoozeTests'
+
+Individual Functionality Tests for IY that will run in both desktop and mobile platforms
+
+'IYAdCountTests'
+'IYSnoozeAlarmTests'
+'IYAggressivePopTests'
+'IYBackCatcher1Tests'
+'IYBackCatcher2Tests'
+'IYMasterPopTests'
+'IYMatureContentTests'
+'IYOptOutTests'
+'IYSleepTests'
+'IYSnoozeTests'
+
+Individual Functionality Tests for IYD that will run in both desktop and mobile platforms
+
+'IYDAdCountTests'
+'IYDSnoozeAlarmTests'
+'IYDAggressivePopTests'
+'IYDBackCatcher1Tests'
+'IYDBackCatcher2Tests'
+'IYDMasterPopTests'
+'IYDMatureContentTests'
+'IYDOptOutTests'
+'IYDSleepTests'
+'IYDSnoozeTests'
+
+Individual Functionality Tests for Desktop Platform that will run for both IY and IYD
+
+'DesktopAdCountTests'
+'DesktopSnoozeAlarmTests'
+'DesktopAggressivePopTests'
+'DesktopBackCatcher1Tests'
+'DesktopBackCatcher2Tests'
+'DesktopMasterPopTests'
+'DesktopMatureContentTests'
+'DesktopOptOutTests'
+'DesktopSleepTests'
+'DesktopSnoozeTests'
+
+Individual Functionality Tests for Mobile Platform that will run for both IY and IYD
+
+'MobileAdCountTests'
+'MobileSnoozeAlarmTests'
+'MobileAggressivePopTests'
+'MobileBackCatcher1Tests'
+'MobileBackCatcher2Tests'
+'MobileMasterPopTests'
+'MobileMatureContentTests'
+'MobileOptOutTests'
+'MobileSleepTests'
+'MobileSnoozeTests'  
+
+=======================
+SVN Info::
+========================
+
+http://8.19.136.16/svn_abc/advertise/prod-trunk/automation/automation-interyield

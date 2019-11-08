@@ -1,0 +1,4 @@
+INFO  [main]:28 Jan 2016 18:47:58,361 TestCombinedPop.java(63)  - beforeTest of MasterPop
+INFO  [main]:28 Jan 2016 18:48:03,722 TestCombinedPop.java(121)  - ======================================================================================
+INFO  [main]:28 Jan 2016 18:48:03,722 TestCombinedPop.java(122)  - Running testCombinedPopForDesktop for row ->2
+INFO  [main]:28 Jan 2016 18:48:03,722 TestCombinedPop.java(123)  - rowObject => OS : Windows, OsVersion : 7, Browser :CHROME, BrowserVersion : 47, HTMLELement : WHITESPACE, POP Type : OVER

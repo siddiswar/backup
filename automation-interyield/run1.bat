@@ -1,0 +1,1 @@
+java -cp "C:/Users/hp/workspace/automation-interyield/target/automation-interyield-1.0-SNAPSHOT/lib/*;C:/Users/hp/workspace/automation-interyield/target/automation-interyield-1.0-SNAPSHOT/conf/" org.testng.TestNG  C:/Users/hp/workspace/automation-interyield/target/automation-interyield-1.0-SNAPSHOT/conf/testng.xml -groups DesktopAdCountTests

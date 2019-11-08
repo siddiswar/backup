@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="IYAutomationSuite">
+
+	<listeners>
+		<listener class-name="com.advertise.listener.ExecutionListener" />
+	</listeners>
+
+	<test name="TestAdCount">
+		<classes>
+			<class name="com.advertise.tests.TestAdCount">
+			</class>
+		</classes>
+	</test>
+	<test name="TestAdSnoozeAlarm">
+		<classes>
+			<class name="com.advertise.tests.TestAdSnoozeAlarm">
+			</class>
+		</classes>
+	</test>
+	<test name="TestAggressivePop">
+		<classes>
+			<class name="com.advertise.tests.TestAggressivePop">
+			</class>
+		</classes>
+	</test>
+	<test name="TestBackCatcher1">
+		<classes>
+			<class name="com.advertise.tests.TestBackCatcher1">
+			</class>
+		</classes>
+	</test>
+	<test name="TestBackCatcher2">
+		<classes>
+			<class name="com.advertise.tests.TestBackCatcher2">
+			</class>
+		</classes>
+	</test>
+	<test name="TestMasterPop">
+		<classes>
+			<class name="com.advertise.tests.TestMasterPop">
+			</class>
+		</classes>
+	</test>
+	<test name="TestCombinedPop">
+		<classes>
+			<class name="com.advertise.tests.TestCombinedPop">
+			</class>
+		</classes>
+	</test>
+	<test name="TestMatureDataContent">
+		<classes>
+			<class name="com.advertise.tests.TestMatureDataContent">
+			</class>
+		</classes>
+	</test>
+	<test name="TestOptOut">
+		<classes>
+			<class name="com.advertise.tests.TestOptOut">
+			</class>
+		</classes>
+	</test>
+	<test name="TestSleep">
+		<classes>
+			<class name="com.advertise.tests.TestSleep">
+			</class>
+		</classes>
+	</test>
+	<test name="TestSnooze">
+		<classes>
+			<class name="com.advertise.tests.TestSnooze">
+			</class>
+		</classes>
+	</test>
+</suite>
