@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [testsuite2]]]">
+  <test name="Login Test(failed)(failed)(failed)">
+    <classes>
+      <class name="testngpackage3.GmailLoginTests">
+        <methods>
+          <include name="doSignup"/>
+        </methods>
+      </class> <!-- testngpackage3.GmailLoginTests -->
+    </classes>
+  </test> <!-- Login Test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [testsuite2]]] -->

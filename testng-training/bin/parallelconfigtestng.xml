@@ -1,0 +1,23 @@
+
+<suite name="parallelsuite" parallel="tests" thread-count="2">
+
+	<test name="Login Test">
+		<classes>
+			<class name="testngpackage3.GmailLoginTests"></class>
+		</classes>
+	</test> 
+
+	<test name="Chat Test">
+		<classes>
+			<class name="testngpackage3.GmailChatTests"></class>
+		</classes>
+
+	</test>
+
+	<test name="Email Test">
+		<classes>
+			<class name="testngpackage3.GmailSendEmailTests"></class>
+		</classes>
+	</test> 
+
+</suite>

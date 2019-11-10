@@ -1,0 +1,20 @@
+<suite name="testsuite2">
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="url" value="http://www.gmail.com.login"></parameter>
+	<parameter name="username" value="validuser1"></parameter>
+	<parameter name="password" value="validpassword1"></parameter>
+	<parameter name="username" value="invaliduser1"></parameter>
+	<parameter name="password" value="inpassword1"></parameter>
+	
+	
+	<test name="Login Test">
+		<classes>
+			<class name="testngparameterization.ParamTests"></class>
+		</classes>
+	</test>
+
+
+
+
+
+</suite>

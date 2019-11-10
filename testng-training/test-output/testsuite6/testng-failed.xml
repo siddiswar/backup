@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testsuite6]">
+  <listeners>
+    <listener class-name="listenerspackage.listener1"/>
+    <listener class-name="listenerspackage.listener2"/>
+  </listeners>
+  <test name="Login Test(failed)">
+    <classes>
+      <class name="testngpackage3.GmailLoginTests">
+        <methods>
+          <include name="doSignup"/>
+        </methods>
+      </class> <!-- testngpackage3.GmailLoginTests -->
+    </classes>
+  </test> <!-- Login Test(failed) -->
+</suite> <!-- Failed suite [testsuite6] -->

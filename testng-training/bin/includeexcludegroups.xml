@@ -1,0 +1,12 @@
+<suite name="testsuite3">
+	<test name="Login Test">
+		<classes>
+			<class name="testngpackage3.GmailLoginTests"></class>
+			<groups>
+				<run>
+					<exclude name="group2"></exclude>
+				</run>
+			</groups>
+		</classes>
+	</test>
+</suite>

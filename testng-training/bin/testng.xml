@@ -1,0 +1,24 @@
+
+<suite name="testsuite1">
+
+	<test name="Login Test">
+		<classes>
+			<class name="testngpackage2.GmailLoginTests"></class>
+		</classes>
+	</test> 
+
+	<test name="Chat Test">
+		<classes>
+			<class name="testngpackage2.GmailChatTests"></class>
+		</classes>
+
+	</test>
+
+	<test name="Email Test">
+		<classes>
+			<class name="testngpackage2.GmailSendEmailTests"></class>
+			<class name="testngpackage2.GmailReplyEmailTests"></class>
+		</classes>
+	</test> 
+
+</suite>

@@ -1,0 +1,12 @@
+<suite name="testsuite6">
+
+	<listeners>
+		<listener class-name="listenerspackage.listener1"></listener>
+		<listener class-name="listenerspackage.listener2"></listener>
+	</listeners>
+	<test name="Login Test">
+		<classes>
+			<class name="testngpackage3.GmailLoginTests"></class>
+		</classes>
+	</test>
+</suite>
