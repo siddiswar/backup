@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19606" started-at="2016-09-23T16:29:25Z" finished-at="2016-09-23T16:29:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19606" started-at="2016-09-23T16:29:25Z" finished-at="2016-09-23T16:29:45Z">
+      <class name="waits.ExplicitWaitExample2">
+        <test-method status="PASS" signature="autoSuggestionTest()[pri:0, instance:waits.ExplicitWaitExample2@eff876]" name="autoSuggestionTest" duration-ms="19517" started-at="2016-09-23T21:59:26Z" finished-at="2016-09-23T21:59:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- autoSuggestionTest -->
+      </class> <!-- waits.ExplicitWaitExample2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
