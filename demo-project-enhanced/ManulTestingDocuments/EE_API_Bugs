@@ -1,0 +1,92 @@
+REST API Bugs
+
+Bug ID : 1
+	Bug Description:
+			When checkin date and checkout dates are past dates, then booking is getting created . Server side validation is missing where it is supposed to throw 400 error 
+	Steps to reproduce:
+		1. Construct proper json data with checkin and checkout dates from past
+				{
+					"firstname": "fname1",
+					"lastname": "sname1",
+					"totalprice": "23",
+					"depositpaid": "false",
+					"bookingdates": {
+						"checkin": "2019-10-03",
+						"checkout": "2019-10-01"
+					}
+				}
+		2. Using Postman client, send a POST request with json data in body
+	
+	Expected Result:
+		Booking request should get failed
+	Actual Result:
+		Booking request got successfull and new booking got created
+
+
+BUG ID : 2
+	Bug Description:
+		After a successfull Delete request, '201 Created' status code is returned instead of '200 ok' status code
+
+	Steps to reproduce:
+		1. Take  a valid booking id (In the following URL 1333 is a valid booking id  )
+		2. Using Postman client, send a Delete request to the URI : http://hotel-test.equalexperts.io/booking/1333.
+		
+	
+	Expected Result:
+		Booking should get deleted with '200 ok' status code
+	Actual Result:
+		Booking request got deleted but with '201 Created' status code		
+
+
+Bug ID : 3
+	Bug Description:
+		When  mandatory data is not sent to PUT request, Instead of 400 Error code, 500 Error code is shown
+
+	Steps to reproduce:
+		1. Construct json data with one or more empty fields
+				{
+				 "firstname": "",
+				 "lastname": "sname1",
+				 "totalprice": "23",
+				 "depositpaid": "false",
+				 "bookingdates": {
+				  "checkin": "",
+				  "checkout": ""
+				 }
+				}
+		2. Using Postman client, send a POST request with json data in body
+	
+	Expected Result:
+		Booking request should get failed with 400 Bad Request code as it’s a client error
+	Actual Result:
+		Booking request got failed with 500 Internal Server Error
+		
+		
+		
+Bug ID : 4
+	Bug Description:
+		When Instead of numeric data, characters are sent in price field , instead of 400 error , 500 Internal server error is thrown
+
+
+	Steps to reproduce:
+		1. Construct json data with non numeric data for totalprice field and proper data for all other fields
+				{
+					"firstname": "fname1",
+					"lastname": "sname1",
+					"totalprice": "abc",
+					"depositpaid": "false",
+					"bookingdates": {
+						"checkin": "2019-10-31",
+						"checkout": "2019-11-01"
+					}
+				}
+		2. Using Postman client, send a POST request with json data in body
+	
+	Expected Result:
+		Booking request should get failed with 400 Bad Request code as client is sending invalid data
+	Actual Result:
+		Booking request got failed with 500 Internal Server Error
+		
+Bug ID : 5
+	Bug Description:
+		After a successfull Post request, '200 ok' status is shown instead of '201 Created'

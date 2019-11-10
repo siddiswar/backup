@@ -1,0 +1,10 @@
+{
+	"firstname": "fnameapi1",
+	"lastname": "snameapi11",
+	"totalprice": "23",
+	"depositpaid": "false",
+	"bookingdates": {
+		"checkin": "2019-11-22",
+		"checkout": "2019-11-23"
+	}
+}

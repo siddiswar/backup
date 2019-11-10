@@ -1,0 +1,37 @@
+After doing some exploratory testing, It is observed that GET, POST and DELETE calls are implemented in the system. PUT call is not implemented.
+Browser network calls and Postman tools  used to carry out exploratory testing
+
+Here are the test scenarios for REST API testing
+
+1. Verify the GET request to following URI is returing json content with all bookings present in the system with the status code '200 ok'	
+		http://hotel-test.equalexperts.io/booking
+		
+2. Verify the GET request to following URI with a booking id in it is returning details of the given booking idwith the status code '200 ok'	
+		http://hotel-test.equalexperts.io/booking/<bookingid>
+		
+3. Verify that GET request with a non existing booking id is returning a '404 Not Found' error message
+	
+4. Verify that when json booking data is sent in a POST request to the following URL , booking is getting created with the status code '201 created'
+		http://hotel-test.equalexperts.io/booking/
+		{
+			"firstname": "fname1",
+			"lastname": "sname1",
+			"totalprice": "23",
+			"depositpaid": "false",
+			"bookingdates": {
+				"checkin": "2019-11-01",
+				"checkout": "2019-11-02"
+			}
+		}
+5. Verify that when POST request is sent with missing mandatory json data, No booking should get created and '400' error code should be shown
+		http://hotel-test.equalexperts.io/booking/
+		
+6. Verify that when POST request is sent with malformed json data, No booking should get created and '400' error code should be shown
+		http://hotel-test.equalexperts.io/booking/
+		
+7. Verify that DELETE request is deleting a given booking id with '200 ok' status code
+		http://hotel-test.equalexperts.io/booking/1335
+		
+8. When invalid Header is passed in POST request, booking should get failed with valid status code
+
+9. Test for response times

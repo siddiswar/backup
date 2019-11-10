@@ -1,0 +1,50 @@
+After doing some exploratory testing, The following test scenarios are identified for bookings web page testing:
+
+1. 'Firstname' field Should accept only valid characters
+2. 'Firstname' field should not be empty
+3. 'Firstname' field should have maximum length validation
+
+4. 'Surname' field Should accept only valid characters
+5. 'Surname' field should not be empty
+6. 'Surname' field should have maximum length validation
+
+7. 'Price' field should not be empty
+8. Should accept only numerical values and decimal values
+9. Should have minimum and maximum value validations
+
+10. 'Deposit' field should be dropdown
+11. 'Deposit' field should have only 'true' and 'false' values to select
+12. 'Deposit' field default value should be 'true'
+
+13. 'Check-in' field should not be empty
+14. On clicking 'Check-in' field should open a date picker to select dates
+15. 'Check-in' date picker should not allow user to select a date from past. 
+16. User should be allowed enter date directly into 'Check-in' field in the	format 'YYYY-MM-DD' only
+
+17. 'Check-out' field should not be empty
+18. On clicking 'Check-out' field should open a date picker to select dates
+19. 'Check-out' date picker should not allow user to select a date from past
+20. User should be allowed enter date directly into 'Check-out' field in the format 'YYYY-MM-DD' only
+21. 'Check-out' date should not be a past date to 'Check-in' date
+
+22. Save button should be present in the form 
+23. 'Save' button should be enabled only when user enters data into all the mandatory fields
+
+24. There should be 'Delete' button beside each booking and it should be enabled
+
+
+25. Create Booking:
+	 After user enters proper data into all mandatory fields and clicks 'Save' button, then a new booking should get created and it should be displayed at 	the bottom 
+	 After user enters improper data and clicks save button, user should be prompted to correct input data and booking should not be created
+	 
+26. Delete Booking:
+			When user clicks 'Delete' button corresponding to a booking, then the booking should get deleted and it should disappear from the bookings board
+		
+27. View bookings:
+		On opening home page, All active bookings present in the system should be diplayed
+		Bookings should be displayed in the order with most recent booking at the top
+
+
+
+	 
+	

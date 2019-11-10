@@ -1,0 +1,127 @@
+After doing exploratory testing, I have come up with following Test Strategy:
+
+Test Strategy: 
+
+	This application testing can be split into 2 parts:
+		1. Web Application testing
+		2. REST API testing
+
+	Assumptions:
+		Website has a single page
+		Authentication is not needed to access the bookings page
+		Payment is not required for booking
+		There is no limitation on number of bookings on any date
+		There is no need to provide number of travelers while making a booking
+		When Deposit field is 'true', then the Price paid is considered as deposit amount and not considered as total Price
+		
+
+	Features to be tested:
+		1. Form testing
+		2. Create booking functionality
+		3. Delete booking functionality
+		4. REST API testing
+		
+	Features not to be tested:
+		1. Authentication
+		2. Payments
+
+
+	Testing Approach:
+
+		Following types of testing needs to be carried out:
+
+		1. Functionality Testing:
+
+			1.1 : Forms Testing
+				.	Test validations on each field
+				.	Test for field length validations
+				.	Test for the default values of fields
+				. 	Test date field validations
+				.	Test for Internationalization and CJK character input
+				
+			1.2 : Links Testing	
+				.	Test Outgoing links
+				.	Test Internal links
+				. 	Test Links jumping on the same page
+				.	Test for broken links
+				
+			1.3	:	Cookies Testing
+				.	Test the application by enabling or disabling the cookies	
+				.	Test the session cookies
+				.	Test cookie encryption
+				.	Test data stored in cookies
+				
+		2. REST API Testing:
+				.	Test GET/POST/PUT/DELETE calls
+				.	Test functionality of each call
+				.	Test parameters in each call
+				. 	Test for response 
+				.	Test for security
+				.	Test for headers
+				. 	Test error handling
+				.	Test for performance
+						
+		3. Usability Testing:
+
+			3.1	:	Navigation Testing
+				.	Test for easyness of navigation
+				.	Test for main menu and its consistency
+				
+			3.3 :  Keyboard-only accessibility testing 
+				.	Take hand of mouse and use keyboard only to navigate through the page	
+					.	Should be able to access each element
+					.	Tabbing should follow the same order as the page layout
+						
+			3.2	:	Content Testing:
+				.	Test for fonts
+				.	Test for colors .i.e no dark and annoying colors
+				.	Test for Spellings
+
+		4. Compatibility Testing:
+
+			4.1	:	Test for Browser compatibility
+			4.2 :	Test for Operating system compatibility
+			4.3	:	Test for Mobile browser compatibility
+				
+		5. Performance Testing:
+
+			5.1	:	Web performance testing:
+				. 	Test for page load time
+				.	Test application performance on different internet connection speeds
+				.	Test application performance when there are too many bookings on the page
+				
+			5.2	:	Web load testing 
+				.	Test if many users are accessing or requesting the same page. 
+				.	Site should handle many simultaneous user requests, large input data from users, Simultaneous connection to DB, heavy load on specific pages etc.
+				
+			5.3 :	Stress testing
+				.	Allow the system to crash by increasing the load and reducing the resources and see how system recovers
+				
+		6.	Security Testing:
+				.	Test by pasting internal url directly into browser address bar without login. Internal pages should not open.
+				.	If you are logged in using username and password and browsing internal pages then try changing url options directly to access another user's data.
+				.	Test for Sql Injection
+				.	Test for Cross site scripting 
+				
+		7. Test for errors in server logs
+
+		8. Test for errors in browser console
+		
+		9. Database testing 
+				. All actions performed on web page should properly update the data in database tables
+				. All actions performed using REST calls should properly update the data in database tables
+		
+	Testing Tools:
+		.	Selenium WebDriver for automation web application testing
+		.	Postman tool for testing REST API manually
+		.	RestAssured for automating API testing
+		.	JMeter for performance testing 
+		
+
+
+		
+			
+
+			
+			
+			
