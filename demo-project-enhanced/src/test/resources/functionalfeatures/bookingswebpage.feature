@@ -18,29 +18,3 @@ Scenario Outline:
 		|firstname|surname|price|depositpaid|fromdate|todate|
 		|fcname22|scname2|12.5|false|2019-10-28|2019-10-29|
 		
-@WebTests		
-Scenario Outline: 
-	Test booking creation functionality with different input combinations 
-	Given booking data is presnt in the row <RowNumber> 
-	And User is on booking page 
-	When User enters data into fields 
-	And User clicks save button 
-	Then Booking creation status should be as expected 
-	Examples: 
-		|RowNumber|
-		|1|
-		|2|
-		|3|
-		|4|
-		|5|
-		|6|
-		|7|
-		|8|
-		
-@WebTests		
-Scenario: 
-	To test deletion of a booking present at the top of the table 
-	Given User is on booking page 
-	And There is atleast one booking in bookings page 
-	When User clicks delete button of the booking present at the top 
-	Then Booking should get deleated

@@ -14,21 +14,21 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.equalexperts.utils.PropertiesReaderUtil;
 
 
-public class WebDriverFactory {
+public class TestBase {
 	
-	Logger logger = Logger.getLogger(WebDriverFactory.class.getName());
+	Logger logger = Logger.getLogger(TestBase.class.getName());
 
-	private static WebDriverFactory webDriverFactory = new WebDriverFactory();
+	private static TestBase testBase = new TestBase();
 
 	private WebDriver webDriver;
 
-	private WebDriverFactory() {
+	private TestBase() {
 		PropertiesReaderUtil.getInstance();// Loading properties
 		
 	}
 
-	public static WebDriverFactory getInstance() {
-		return webDriverFactory;
+	public static TestBase getInstance() {
+		return testBase;
 
 	}
 

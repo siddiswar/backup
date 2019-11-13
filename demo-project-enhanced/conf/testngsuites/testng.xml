@@ -1,0 +1,17 @@
+<suite name="Equal experts test suite ">
+	<listeners>
+		<listener class-name="com.equalexperts.listeners.ExtentReporterNG" />
+	</listeners>
+	<test name="API Test">
+		<classes>
+			<class name="com.equalexperts.runners.APITestNGRunner"></class>
+		</classes>
+	</test>
+
+	<test name="Web Test">
+		<classes>
+			<class name="com.equalexperts.runners.WebTestNGRunner"></class>
+		</classes>
+	</test>
+
+</suite>

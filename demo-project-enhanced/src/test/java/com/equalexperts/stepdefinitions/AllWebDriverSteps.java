@@ -18,7 +18,7 @@ import com.equalexperts.bookingobjects.BookingData;
 import com.equalexperts.pagefactory.BookingsPage;
 import com.equalexperts.utils.ExcelUtils;
 import com.equalexperts.utils.PropertiesReaderUtil;
-import com.equalexperts.webdriver.WebDriverFactory;
+import com.equalexperts.webdriver.TestBase;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -49,7 +49,7 @@ public class AllWebDriverSteps {
 		logger.info("-----------------Before Hook of AllWebDriverSteps---------------------------");
 		PropertiesReaderUtil.getInstance();
 		expectedBookingsPageTitle = System.getProperty("bookings_page_title");
-		webDriver = WebDriverFactory.getInstance().getWebDriver();
+		webDriver = TestBase.getInstance().getWebDriver();
 		bookingsPage = new BookingsPage(webDriver);
 		excelUtils = new ExcelUtils();
 	}

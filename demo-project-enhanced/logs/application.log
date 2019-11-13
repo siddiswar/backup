@@ -1,47 +1,44 @@
-INFO  [main]:03 Nov 2019 22:59:07,464 AllAPISteps.java(36)  - -----------------Before Hook of AllAPISteps-----------------
-INFO  [main]:03 Nov 2019 22:59:07,468 PropertiesReaderUtil.java(18)  - Reading properties from properties file into system properties
-INFO  [main]:03 Nov 2019 22:59:07,478 AllAPISteps.java(50)  - I have Get URI
-INFO  [main]:03 Nov 2019 22:59:07,478 AllAPISteps.java(52)  - http://hotel-test.equalexperts.io/booking/
-INFO  [main]:03 Nov 2019 22:59:07,478 AllAPISteps.java(58)  - I make a Get call
-INFO  [main]:03 Nov 2019 22:59:09,768 AllAPISteps.java(88)  - I should get all bookins present in the system
-INFO  [main]:03 Nov 2019 22:59:09,799 AllAPISteps.java(90)  - [{"bookingid":1514},{"bookingid":1515},{"bookingid":1516},{"bookingid":1517},{"bookingid":1518},{"bookingid":1519},{"bookingid":1520},{"bookingid":1521},{"bookingid":1522},{"bookingid":1523},{"bookingid":1524},{"bookingid":1525},{"bookingid":1526},{"bookingid":1527},{"bookingid":1528},{"bookingid":1529},{"bookingid":1530},{"bookingid":1531},{"bookingid":1532},{"bookingid":1533},{"bookingid":1534}]
-INFO  [main]:03 Nov 2019 22:59:10,344 AllAPISteps.java(99)  - Bookings Count :21
-INFO  [main]:03 Nov 2019 22:59:10,344 AllAPISteps.java(44)  - -----------------After Hook of AllAPISteps-----------------
-INFO  [main]:03 Nov 2019 22:59:10,348 AllAPISteps.java(36)  - -----------------Before Hook of AllAPISteps-----------------
-INFO  [main]:03 Nov 2019 22:59:10,348 AllAPISteps.java(112)  - I have POST URI
-INFO  [main]:03 Nov 2019 22:59:10,349 AllAPISteps.java(114)  - http://hotel-test.equalexperts.io/booking/
-INFO  [main]:03 Nov 2019 22:59:10,349 AllAPISteps.java(122)  - I have booking data in the jsonfile :conf/testdata/newbooking.json
-INFO  [main]:03 Nov 2019 22:59:10,353 AllAPISteps.java(130)  - I make a post request with the json file
-INFO  [main]:03 Nov 2019 22:59:10,474 AllAPISteps.java(139)  - New Booking should get created successfully
-INFO  [main]:03 Nov 2019 22:59:10,475 AllAPISteps.java(141)  - {"bookingid":1535,"booking":{"firstname":"fnameapi1","lastname":"snameapi11","totalprice":23,"depositpaid":false,"bookingdates":{"checkin":"2019-11-22","checkout":"2019-11-23"}}}
-INFO  [main]:03 Nov 2019 22:59:10,477 AllAPISteps.java(44)  - -----------------After Hook of AllAPISteps-----------------
-INFO  [main]:03 Nov 2019 22:59:10,483 AllWebDriverSteps.java(49)  - -----------------Before Hook of AllWebDriverSteps---------------------------
-INFO  [main]:03 Nov 2019 22:59:10,486 WebDriverFactory.java(38)  - Browser :FIREFOX
-INFO  [main]:03 Nov 2019 22:59:16,586 AllWebDriverSteps.java(67)  - User is on booking page
-INFO  [main]:03 Nov 2019 22:59:20,293 AllWebDriverSteps.java(74)  - Count Before Booking/Deletion :22
-INFO  [main]:03 Nov 2019 22:59:20,294 AllWebDriverSteps.java(81)  - User enters fcname22  in firstname field
-INFO  [main]:03 Nov 2019 22:59:20,412 AllWebDriverSteps.java(88)  - User enters scname2  in surname field
-INFO  [main]:03 Nov 2019 22:59:20,505 AllWebDriverSteps.java(95)  - User enters 12.5  in Price field
-INFO  [main]:03 Nov 2019 22:59:20,585 AllWebDriverSteps.java(102)  - User selects false  in deposit field
-INFO  [main]:03 Nov 2019 22:59:20,942 AllWebDriverSteps.java(109)  - User enters 2019-10-28  in checkin field
-INFO  [main]:03 Nov 2019 22:59:21,117 AllWebDriverSteps.java(116)  - User enters 2019-10-29  in checkout field
-INFO  [main]:03 Nov 2019 22:59:21,244 AllWebDriverSteps.java(123)  - User clicks save button
-INFO  [main]:03 Nov 2019 22:59:26,515 AllWebDriverSteps.java(133)  - User clicks save button
-INFO  [main]:03 Nov 2019 22:59:26,547 AllWebDriverSteps.java(135)  - After Booking :23
-INFO  [main]:03 Nov 2019 22:59:26,548 AllWebDriverSteps.java(136)  - After Booking :23
-INFO  [main]:03 Nov 2019 22:59:26,548 AllWebDriverSteps.java(59)  - -----------------After Hook of AllWebDriverSteps------------------------------
-INFO  [main]:03 Nov 2019 22:59:30,232 AllWebDriverSteps.java(49)  - -----------------Before Hook of AllWebDriverSteps---------------------------
-INFO  [main]:03 Nov 2019 22:59:30,232 WebDriverFactory.java(38)  - Browser :FIREFOX
-INFO  [main]:03 Nov 2019 22:59:35,207 AllWebDriverSteps.java(180)  - booking data is presnt in the row :1
-INFO  [main]:03 Nov 2019 22:59:35,207 AllWebDriverSteps.java(181)  - Row Number :1
-INFO  [main]:03 Nov 2019 22:59:36,067 ExcelUtils.java(45)  - Fname1 : 
-INFO  [main]:03 Nov 2019 22:59:36,068 ExcelUtils.java(46)  - Sname1 : 
-INFO  [main]:03 Nov 2019 22:59:36,068 ExcelUtils.java(47)  - 12.34 : 
-INFO  [main]:03 Nov 2019 22:59:36,068 ExcelUtils.java(48)  - true : 
-INFO  [main]:03 Nov 2019 22:59:36,068 ExcelUtils.java(49)  - 2019-11-15 : 
-INFO  [main]:03 Nov 2019 22:59:36,069 ExcelUtils.java(50)  - 2019-11-16 : 
-INFO  [main]:03 Nov 2019 22:59:36,069 ExcelUtils.java(51)  - CREATE : 
-INFO  [main]:03 Nov 2019 22:59:36,189 AllWebDriverSteps.java(67)  - User is on booking page
-INFO  [main]:03 Nov 2019 22:59:39,759 AllWebDriverSteps.java(74)  - Count Before Booking/Deletion :23
-INFO  [main]:03 Nov 2019 22:59:39,760 AllWebDriverSteps.java(189)  - User enters data into fields
-INFO  [main]:03 Nov 2019 22:59:40,346 AllWebDriverSteps.java(123)  - User clicks save button
+INFO  [main]:10 Nov 2019 18:04:10,680 AllAPISteps.java(36)  - -----------------Before Hook of AllAPISteps-----------------
+INFO  [main]:10 Nov 2019 18:04:10,686 PropertiesReaderUtil.java(18)  - Reading properties from properties file into system properties
+INFO  [main]:10 Nov 2019 18:04:10,689 AllAPISteps.java(50)  - I have Get URI
+INFO  [main]:10 Nov 2019 18:04:10,689 AllAPISteps.java(52)  - http://hotel-test.equalexperts.io/booking/
+INFO  [main]:10 Nov 2019 18:04:10,689 AllAPISteps.java(58)  - I make a Get call
+INFO  [main]:10 Nov 2019 18:04:12,829 AllAPISteps.java(65)  - Response should have 200 status code
+INFO  [main]:10 Nov 2019 18:04:12,829 AllAPISteps.java(67)  - actualResponseCode :200
+INFO  [main]:10 Nov 2019 18:04:12,829 AllAPISteps.java(68)  - expectedResponseCode 200
+INFO  [main]:10 Nov 2019 18:04:12,833 AllAPISteps.java(75)  - Respose should be of Json type
+INFO  [main]:10 Nov 2019 18:04:12,834 AllAPISteps.java(76)  - application/json; charset=utf-8
+INFO  [main]:10 Nov 2019 18:04:12,834 AllAPISteps.java(77)  - application/json
+INFO  [main]:10 Nov 2019 18:04:12,834 AllAPISteps.java(88)  - I should get all bookins present in the system
+INFO  [main]:10 Nov 2019 18:04:12,867 AllAPISteps.java(90)  - [{"bookingid":1689},{"bookingid":1690},{"bookingid":1691},{"bookingid":1692},{"bookingid":1693},{"bookingid":1694},{"bookingid":1695},{"bookingid":1696},{"bookingid":1697},{"bookingid":1698},{"bookingid":1699},{"bookingid":1700},{"bookingid":1701},{"bookingid":1702},{"bookingid":1703},{"bookingid":1704},{"bookingid":1705},{"bookingid":1706},{"bookingid":1707},{"bookingid":1708},{"bookingid":1709},{"bookingid":1710},{"bookingid":1711},{"bookingid":1712},{"bookingid":1713},{"bookingid":1714},{"bookingid":1715},{"bookingid":1716},{"bookingid":1717},{"bookingid":1718},{"bookingid":1719},{"bookingid":1720},{"bookingid":1721},{"bookingid":1722},{"bookingid":1723},{"bookingid":1724},{"bookingid":1725},{"bookingid":1726},{"bookingid":1727},{"bookingid":1728},{"bookingid":1729},{"bookingid":1730},{"bookingid":1731},{"bookingid":1732},{"bookingid":1733},{"bookingid":1734},{"bookingid":1735},{"bookingid":1736},{"bookingid":1737},{"bookingid":1738},{"bookingid":1739},{"bookingid":1740},{"bookingid":1741},{"bookingid":1742},{"bookingid":1743},{"bookingid":1744},{"bookingid":1745},{"bookingid":1746},{"bookingid":1747},{"bookingid":1748},{"bookingid":1749},{"bookingid":1750},{"bookingid":1751},{"bookingid":1752},{"bookingid":1753},{"bookingid":1754},{"bookingid":1755},{"bookingid":1756},{"bookingid":1757},{"bookingid":1758},{"bookingid":1759},{"bookingid":1760},{"bookingid":1761},{"bookingid":1762},{"bookingid":1763},{"bookingid":1764},{"bookingid":1765},{"bookingid":1766},{"bookingid":1767},{"bookingid":1768},{"bookingid":1769},{"bookingid":1770},{"bookingid":1771},{"bookingid":1772},{"bookingid":1773},{"bookingid":1774},{"bookingid":1775},{"bookingid":1776},{"bookingid":1777},{"bookingid":1778},{"bookingid":1779},{"bookingid":1780},{"bookingid":1781},{"bookingid":1782},{"bookingid":1783},{"bookingid":1784},{"bookingid":1785}]
+INFO  [main]:10 Nov 2019 18:04:13,590 AllAPISteps.java(99)  - Bookings Count :97
+INFO  [main]:10 Nov 2019 18:04:13,590 AllAPISteps.java(44)  - -----------------After Hook of AllAPISteps-----------------
+INFO  [main]:10 Nov 2019 18:04:13,600 AllAPISteps.java(36)  - -----------------Before Hook of AllAPISteps-----------------
+INFO  [main]:10 Nov 2019 18:04:13,602 AllAPISteps.java(112)  - I have POST URI
+INFO  [main]:10 Nov 2019 18:04:13,602 AllAPISteps.java(114)  - http://hotel-test.equalexperts.io/booking/
+INFO  [main]:10 Nov 2019 18:04:13,603 AllAPISteps.java(122)  - I have booking data in the jsonfile :conf/testdata/newbooking.json
+INFO  [main]:10 Nov 2019 18:04:13,605 AllAPISteps.java(130)  - I make a post request with the json file
+INFO  [main]:10 Nov 2019 18:04:13,760 AllAPISteps.java(65)  - Response should have 200 status code
+INFO  [main]:10 Nov 2019 18:04:13,761 AllAPISteps.java(67)  - actualResponseCode :200
+INFO  [main]:10 Nov 2019 18:04:13,761 AllAPISteps.java(68)  - expectedResponseCode 200
+INFO  [main]:10 Nov 2019 18:04:13,761 AllAPISteps.java(75)  - Respose should be of Json type
+INFO  [main]:10 Nov 2019 18:04:13,762 AllAPISteps.java(76)  - application/json; charset=utf-8
+INFO  [main]:10 Nov 2019 18:04:13,763 AllAPISteps.java(77)  - application/json
+INFO  [main]:10 Nov 2019 18:04:13,763 AllAPISteps.java(139)  - New Booking should get created successfully
+INFO  [main]:10 Nov 2019 18:04:13,763 AllAPISteps.java(141)  - {"bookingid":1786,"booking":{"firstname":"fnameapi1","lastname":"snameapi11","totalprice":23,"depositpaid":false,"bookingdates":{"checkin":"2019-11-22","checkout":"2019-11-23"}}}
+INFO  [main]:10 Nov 2019 18:04:13,764 AllAPISteps.java(44)  - -----------------After Hook of AllAPISteps-----------------
+INFO  [main]:10 Nov 2019 18:04:13,766 AllWebDriverSteps.java(49)  - -----------------Before Hook of AllWebDriverSteps---------------------------
+INFO  [main]:10 Nov 2019 18:04:13,766 TestBase.java(38)  - Browser :FIREFOX
+INFO  [main]:10 Nov 2019 18:04:20,590 AllWebDriverSteps.java(67)  - User is on booking page
+INFO  [main]:10 Nov 2019 18:04:24,361 AllWebDriverSteps.java(74)  - Count Before Booking/Deletion :98
+INFO  [main]:10 Nov 2019 18:04:24,362 AllWebDriverSteps.java(81)  - User enters fcname22  in firstname field
+INFO  [main]:10 Nov 2019 18:04:24,500 AllWebDriverSteps.java(88)  - User enters scname2  in surname field
+INFO  [main]:10 Nov 2019 18:04:24,600 AllWebDriverSteps.java(95)  - User enters 12.5  in Price field
+INFO  [main]:10 Nov 2019 18:04:24,678 AllWebDriverSteps.java(102)  - User selects false  in deposit field
+INFO  [main]:10 Nov 2019 18:04:25,046 AllWebDriverSteps.java(109)  - User enters 2019-10-28  in checkin field
+INFO  [main]:10 Nov 2019 18:04:25,371 AllWebDriverSteps.java(116)  - User enters 2019-10-29  in checkout field
+INFO  [main]:10 Nov 2019 18:04:25,500 AllWebDriverSteps.java(123)  - User clicks save button
+INFO  [main]:10 Nov 2019 18:04:30,775 AllWebDriverSteps.java(133)  - User clicks save button
+INFO  [main]:10 Nov 2019 18:04:30,847 AllWebDriverSteps.java(135)  - After Booking :99
+INFO  [main]:10 Nov 2019 18:04:30,848 AllWebDriverSteps.java(136)  - After Booking :99
+INFO  [main]:10 Nov 2019 18:04:30,849 AllWebDriverSteps.java(59)  - -----------------After Hook of AllWebDriverSteps------------------------------
